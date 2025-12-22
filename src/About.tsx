@@ -90,7 +90,7 @@ function AboutPage() {
   ];
 
   return (
-    <section className="flex flex-col mx-[5vw] max-sm:mx-[10vw] items-center mt-48 max-[570px]:mx-6 ">
+    <section className="flex flex-col side-spacing items-center mt-48 max-[570px]:mx-6 ">
       <Nav />
       <div className="flex w-full mb-48 max-[570px]:mb-24">
         <div className="text-black text-left max-md:text-center text-md:text-[60px] max-[570px]:text-[50px]">
