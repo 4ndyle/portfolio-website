@@ -10,7 +10,8 @@ function Experiences() {
         <Work
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
-          date="June 2026 - Aug 2026"
+          date="Summer 2026"
+          color="#DBDBDB"
         />
       </BlurFade>
       {/* <BlurFade delay={0.5} inView>
@@ -52,21 +53,21 @@ interface workInfo {
   name: string;
   organization: string;
   date: string;
+  color: string;
 }
 
-function Work({ name, organization, date }: workInfo) {
+function Work({ name, organization, date, color }: workInfo) {
   return (
     <div className="flex justify-between my-12 max-[550px]:flex-col max-[550px]:gap-4">
       <div className="flex flex-col text-left max-[550px]:text-center">
         <h5 className="side-spacing">{name}</h5>
         <p className="organizationText side-spacing">{organization}</p>
         <div
-          className="
-          w-screen 
-          h-96 
-          bg-black
-        "
-        ></div>
+          className="w-screen h-96 p-12 font-extralight italic"
+          style={{ backgroundColor: color }}
+        >
+          <h5 className="text-right"> {date} </h5>
+        </div>
       </div>
     </div>
   );
