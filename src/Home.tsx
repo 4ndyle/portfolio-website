@@ -39,8 +39,9 @@ function Home() {
       <Nav />
       <Lander />
 
-      <section className="flex flex-col mx-[15vw] max-sm:mx-[10vw] justify-center items-center">
-        <Experiences />
+      <Experiences />
+
+      <section className="side-spacing flex flex-col justify-center items-center">
         <Projects />
         <Footer />
       </section>

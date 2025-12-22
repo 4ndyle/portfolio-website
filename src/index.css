@@ -60,7 +60,11 @@ h4 {
 }
 
 h5 {
-  @apply font-['Inter'] font-bold text-3xl max-[550px]:text-xl;
+  @apply font-['Inter'] text-4xl max-[550px]:text-xl;
+}
+
+.organizationText {
+  @apply font-['Inter'] text-[#B4B4B4] font-light text-2xl max-[550px]:text-xl;
 }
 
 .aboutSect {
@@ -77,4 +81,8 @@ h5 {
 
 .activities {
   @apply text-2xl font-bold font-['Inter'] text-left max-md:text-xl max-sm:text-lg;
+}
+
+.side-spacing {
+  @apply mx-[10vw] max-sm:mx-[10vw];
 }
