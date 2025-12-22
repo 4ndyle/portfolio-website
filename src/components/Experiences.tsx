@@ -63,10 +63,15 @@ function Work({ name, organization, date, color }: workInfo) {
         <h5 className="side-spacing">{name}</h5>
         <p className="organizationText side-spacing">{organization}</p>
         <div
-          className="w-screen h-96 p-12 font-extralight italic"
+          className="flex flex-col items-center w-screen h-[45vh] p-12 font-extralight italic my-16"
           style={{ backgroundColor: color }}
         >
-          <h5 className="text-right"> {date} </h5>
+          <h5 className="w-full text-right"> {date} </h5>
+          <img
+            src="schwab-logo.png"
+            className="
+            h-[25vh] w-fit my-auto"
+          />
         </div>
       </div>
     </div>
