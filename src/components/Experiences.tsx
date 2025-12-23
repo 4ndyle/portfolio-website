@@ -2,7 +2,7 @@ import BlurFade from "./ui/blur-fade";
 
 function Experiences() {
   return (
-    <div className="my-[75vh] flex flex-col w-full">
+    <div className="mt-[75vh] flex flex-col w-full">
       <h2 className="side-spacing text-7xl font-bold my-16 text-left max-md:text-6xl max-md:text-center max-[550px]:text-5xl">
         Experience.
       </h2>
@@ -11,17 +11,20 @@ function Experiences() {
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
           imageName="schwab-logo.png"
-          date="Summer 2026"
+          date="Incoming Summer 2026"
           color="#DBDBDB"
           imgHeight="25vh"
         />
 
-        <WorkDescription
-          job="Software Engineer Intern"
-          jobDesc={["Full-Stack", "C# / .NET", "Data Structures / Algorithms"]}
-          organization="Cross Enterprise Technologies - "
-          team="Portfolio Management Technologies"
-        />
+        <BlurFade delay={0.5} inView>
+          <WorkDescription
+            job="Software Engineer Intern"
+            skills={["Full-Stack", "C# / .NET", "Data Structures / Algorithms"]}
+            organization="Cross Enterprise Technologies - "
+            team="Portfolio Management Technologies"
+            description="To be determined :)"
+          />
+        </BlurFade>
       </BlurFade>
       <BlurFade delay={1} inView>
         <Work
@@ -31,6 +34,17 @@ function Experiences() {
           date="Summer 2025"
           color="#92AF8C"
         />
+
+        <BlurFade delay={0.5} inView>
+          <WorkDescription
+            job="Software Engineer Intern"
+            skills={["Full-Stack", "C# / .NET", "JavaScript", "SQL", "Azure"]}
+            organization="Software Development - "
+            team="Special Forces"
+            description="Contributed to the modernization of a critical logistics system, helping transition a legacy application into a scalable web platform that improved efficiency for delivery drivers and warehouse operations. Supported backend development, data optimization, and secure access controls, streamlining daily workflows and enabling reliable operations across multiple locations."
+            description2="Working on systems used daily at scale deepened my understanding of how software directly impacts operational efficiency. The role emphasized building reliable, user-focused solutions that support fast-paced, real-world logistics workflows."
+          />
+        </BlurFade>
       </BlurFade>
       <BlurFade delay={1} inView>
         <Work
@@ -41,6 +55,17 @@ function Experiences() {
           color="#E7DFFF"
           imgHeight="15vh"
         />
+
+        <BlurFade delay={0.5} inView>
+          <WorkDescription
+            job="ebay Pathways Program"
+            skills={["Python", "Data Structures", "Algorithms"]}
+            organization="Early Career Program - "
+            team="Pathways"
+            description="Chosen as one of 80 students nationwide for the highly selective eBay Pathways Program, gaining exposure to industry best practices through panels with eBay software engineers."
+            description2="Participating in the eBay Pathways Program enhanced my grasp of data structures and algorithm design while exposing me to industry-standard problem-solving methodologies. The program reinforced how foundational concepts drive effective software solutions at scale."
+          />
+        </BlurFade>
       </BlurFade>
       <BlurFade delay={1} inView>
         <Work
@@ -51,6 +76,17 @@ function Experiences() {
           color="#D5EAFF"
           imgHeight="15vh"
         />
+
+        <BlurFade delay={0.5} inView>
+          <WorkDescription
+            job="Computer Technician"
+            skills={["Quality Assurance", "Operating Systems", "Hardware"]}
+            organization="Information Technology - "
+            team="Asset Lifecycle Management"
+            description="Supported quality assurance efforts by inspecting and validating computer hardware and software to ensure compliance with company and industry standards. Improved troubleshooting and repair workflows by organizing technical documentation into a centralized knowledge base, helping the team maintain consistency, accuracy, and system reliability."
+            description2="This role strengthened my attention to detail and reinforced the importance of thorough testing and inspection in maintaining reliable systems. By working closely with both hardware and software, I developed a deeper understanding of quality assurance processes and computer systems."
+          />
+        </BlurFade>
       </BlurFade>
     </div>
   );
@@ -96,16 +132,20 @@ function Work({
 
 interface workDescription {
   job: string;
-  jobDesc: string[];
+  skills: string[];
   organization: string;
   team: string;
+  description: string;
+  description2?: string;
 }
 
 function WorkDescription({
   job,
-  jobDesc,
+  skills,
   organization,
   team,
+  description,
+  description2 = "",
 }: workDescription) {
   return (
     <section className="flex justify-center mb-96">
@@ -114,7 +154,7 @@ function WorkDescription({
           <div className="flex flex-col justify-starth-24 w-full gap-8">
             <section>
               <p className="job-desc-format"> {job} </p>
-              {jobDesc.map((item, index) => {
+              {skills.map((item, index) => {
                 return (
                   <p key={index} className="job-desc-format text-[#B4B4B4]">
                     {item}
@@ -129,14 +169,9 @@ function WorkDescription({
               <p className="job-desc-format text-[#B4B4B4]"> {team} </p>
             </section>
           </div>
-          <div className="h-24 w-full col-span-2">
-            <p className="text-left">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem consectetur beatae dolorem! Corrupti ipsa
-              accusamus, natus repudiandae cum modi dolore magni omnis
-              reiciendis exercitationem veritatis quam quia! Recusandae, tempora
-              neque!
-            </p>
+          <div className="h-24 w-full col-span-2 flex flex-col gap-8">
+            <p className="text-left">{description}</p>
+            <p className="text-left">{description2}</p>
           </div>
         </div>
       </div>

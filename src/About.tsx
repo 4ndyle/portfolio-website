@@ -124,7 +124,7 @@ function AboutPage() {
           Photography.
         </p>
       </div>
-      <div className="hidden md:block w-full h-fit mb-24 ">
+      <div className="hidden md:block w-full h-fit mb-96">
         <BlurFade inView>
           <Masonry
             items={items}
