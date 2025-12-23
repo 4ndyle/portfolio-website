@@ -13,39 +13,38 @@ function Experiences() {
           imageName="schwab-logo.png"
           date="Summer 2026"
           color="#DBDBDB"
-        />
-      </BlurFade>
-      {/* <BlurFade delay={0.5} inView>
-        <Work
-          name="Shamrock Foods Company"
-          role="Software Engineer Intern"
-          date="May 2025 - Aug 2025"
+          imgHeight="25vh"
         />
       </BlurFade>
       <BlurFade delay={0.5} inView>
         <Work
-          name="eBay"
-          role="eBay Pathways 2025"
-          date="May 2025 - Aug 2025"
+          name="Shamrock Foods"
+          organization="Special Forces Technologies"
+          imageName="shamrock-logo.png"
+          date="Summer 2025"
+          color="#92AF8C"
         />
       </BlurFade>
       <BlurFade delay={0.5} inView>
-        <Work name="Acorns" role="Ambassador" date="Jan 2025 - May 2025" />
+        <Work
+          name="ebay"
+          organization="Pathways Program"
+          imageName="ebay-logo.png"
+          date="Summer 2025"
+          color="#E7DFFF"
+          imgHeight="15vh"
+        />
       </BlurFade>
       <BlurFade delay={0.5} inView>
         <Work
           name="Iron Mountain"
-          role="Computer Technician"
-          date="May 2024 - Aug 2024"
+          organization="Asset Lifecycle Management"
+          imageName="iron-mountain-logo.png"
+          date="Summer 2024"
+          color="#D5EAFF"
+          imgHeight="15vh"
         />
       </BlurFade>
-      <BlurFade delay={0.5} inView>
-        <Work
-          name="Tutor Doctor"
-          role="Comp Sci & Math Tutor"
-          date="Dec 2023 - June 2024"
-        />
-      </BlurFade> */}
     </div>
   );
 }
@@ -56,9 +55,17 @@ interface workInfo {
   imageName: string;
   date: string;
   color: string;
+  imgHeight: string;
 }
 
-function Work({ name, organization, imageName, date, color }: workInfo) {
+function Work({
+  name,
+  organization,
+  imageName,
+  date,
+  color,
+  imgHeight = "20vh",
+}: workInfo) {
   return (
     <div className="flex justify-between my-12 max-[550px]:flex-col max-[550px]:gap-4">
       <div className="flex flex-col text-left max-[550px]:text-center">
@@ -71,8 +78,8 @@ function Work({ name, organization, imageName, date, color }: workInfo) {
           <h5 className="w-full text-right"> {date} </h5>
           <img
             src={imageName}
-            className="
-            h-[25vh] w-fit my-auto"
+            className="w-fit my-auto"
+            style={{ height: imgHeight }}
           />
         </div>
       </div>
