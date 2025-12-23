@@ -10,6 +10,7 @@ function Experiences() {
         <Work
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
+          imageName="schwab-logo.png"
           date="Summer 2026"
           color="#DBDBDB"
         />
@@ -52,11 +53,12 @@ function Experiences() {
 interface workInfo {
   name: string;
   organization: string;
+  imageName: string;
   date: string;
   color: string;
 }
 
-function Work({ name, organization, date, color }: workInfo) {
+function Work({ name, organization, imageName, date, color }: workInfo) {
   return (
     <div className="flex justify-between my-12 max-[550px]:flex-col max-[550px]:gap-4">
       <div className="flex flex-col text-left max-[550px]:text-center">
@@ -68,7 +70,7 @@ function Work({ name, organization, date, color }: workInfo) {
         >
           <h5 className="w-full text-right"> {date} </h5>
           <img
-            src="schwab-logo.png"
+            src={imageName}
             className="
             h-[25vh] w-fit my-auto"
           />
