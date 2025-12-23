@@ -86,3 +86,7 @@ h5 {
 .side-spacing {
   @apply mx-[10vw] max-sm:mx-[10vw];
 }
+
+.job-desc-format {
+  @apply text-left;
+}

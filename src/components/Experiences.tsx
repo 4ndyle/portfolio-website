@@ -2,11 +2,11 @@ import BlurFade from "./ui/blur-fade";
 
 function Experiences() {
   return (
-    <div className="my-92 flex flex-col w-full">
+    <div className="my-[75vh] flex flex-col w-full">
       <h2 className="side-spacing text-7xl font-bold my-16 text-left max-md:text-6xl max-md:text-center max-[550px]:text-5xl">
         Experience.
       </h2>
-      <BlurFade delay={0.5} inView>
+      <BlurFade delay={1} inView>
         <Work
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
@@ -15,8 +15,15 @@ function Experiences() {
           color="#DBDBDB"
           imgHeight="25vh"
         />
+
+        <WorkDescription
+          job="Software Engineer Intern"
+          jobDesc={["Full-Stack", "C# / .NET", "Data Structures / Algorithms"]}
+          organization="Cross Enterprise Technologies - "
+          team="Portfolio Management Technologies"
+        />
       </BlurFade>
-      <BlurFade delay={0.5} inView>
+      <BlurFade delay={1} inView>
         <Work
           name="Shamrock Foods"
           organization="Special Forces Technologies"
@@ -25,7 +32,7 @@ function Experiences() {
           color="#92AF8C"
         />
       </BlurFade>
-      <BlurFade delay={0.5} inView>
+      <BlurFade delay={1} inView>
         <Work
           name="ebay"
           organization="Pathways Program"
@@ -35,7 +42,7 @@ function Experiences() {
           imgHeight="15vh"
         />
       </BlurFade>
-      <BlurFade delay={0.5} inView>
+      <BlurFade delay={1} inView>
         <Work
           name="Iron Mountain"
           organization="Asset Lifecycle Management"
@@ -55,7 +62,7 @@ interface workInfo {
   imageName: string;
   date: string;
   color: string;
-  imgHeight: string;
+  imgHeight?: string;
 }
 
 function Work({
@@ -84,6 +91,56 @@ function Work({
         </div>
       </div>
     </div>
+  );
+}
+
+interface workDescription {
+  job: string;
+  jobDesc: string[];
+  organization: string;
+  team: string;
+}
+
+function WorkDescription({
+  job,
+  jobDesc,
+  organization,
+  team,
+}: workDescription) {
+  return (
+    <section className="flex justify-center mb-96">
+      <div className="w-[67%]">
+        <div className="grid grid-cols-3 gap-1">
+          <div className="flex flex-col justify-starth-24 w-full gap-8">
+            <section>
+              <p className="job-desc-format"> {job} </p>
+              {jobDesc.map((item, index) => {
+                return (
+                  <p key={index} className="job-desc-format text-[#B4B4B4]">
+                    {item}
+                  </p>
+                );
+              })}
+            </section>
+
+            <section>
+              <p className="job-desc-format"> Team: </p>
+              <p className="job-desc-format text-[#B4B4B4]"> {organization} </p>
+              <p className="job-desc-format text-[#B4B4B4]"> {team} </p>
+            </section>
+          </div>
+          <div className="h-24 w-full col-span-2">
+            <p className="text-left">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Exercitationem consectetur beatae dolorem! Corrupti ipsa
+              accusamus, natus repudiandae cum modi dolore magni omnis
+              reiciendis exercitationem veritatis quam quia! Recusandae, tempora
+              neque!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
