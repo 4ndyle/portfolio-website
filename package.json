@@ -18,7 +18,7 @@
     "framer-motion": "^11.9.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.445.0",
-    "motion": "^12.0.5",
+    "motion": "^12.23.26",
     "ogl": "^1.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
