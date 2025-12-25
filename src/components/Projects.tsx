@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 function Projects() {
   return (
-    <section className="flex flex-col items-center my-96 max-w-[1800px]">
+    <section className="flex flex-col items-center my-96">
       <div className="flex flex-col">
         <h2 className="text-7xl font-bold my-16 text-left max-md:text-6xl max-md:text-center max-[550px]:text-5xl">
           Latest Work.
@@ -117,7 +117,7 @@ function ProjectCards() {
                 <img
                   src="sip&play.png"
                   alt="sip"
-                  className="aspect-square w-[90%] min-w-[200px]"
+                  className="aspect-square w-[90%] min-w-[200px] max-w-[500px]"
                 />
               </div>
             </a>
