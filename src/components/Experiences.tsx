@@ -124,7 +124,7 @@ function Work({
           </p>
           <img
             src={imageName}
-            className="w-fit my-auto"
+            className="my-auto"
             style={{ height: imgHeight }}
           />
         </div>
