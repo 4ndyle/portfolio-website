@@ -13,7 +13,6 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal overflow */
-  box-sizing: border-box;
 }
 
 h1 {
@@ -60,7 +59,7 @@ h4 {
 }
 
 h5 {
-  @apply font-['Inter'] text-4xl max-[550px]:text-xl;
+  @apply font-['Inter'] text-4xl max-sm:text-3xl;
 }
 
 .organizationText {
@@ -84,7 +83,7 @@ h5 {
 }
 
 .side-spacing {
-  @apply mx-[10vw] max-sm:mx-[10vw];
+  @apply mx-[10vw] max-sm:mx-[10vw] max-lg:text-center;
 }
 
 .job-desc-format {

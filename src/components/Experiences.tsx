@@ -74,7 +74,7 @@ function Experiences() {
           imageName="iron-mountain-logo.png"
           date="Summer 2024"
           color="#D5EAFF"
-          imgHeight="15vh"
+          imgHeight="12vh"
         />
 
         <BlurFade delay={0.5} inView>
@@ -118,7 +118,10 @@ function Work({
           className="flex flex-col items-center w-screen h-[45vh] p-12 font-extralight italic my-16"
           style={{ backgroundColor: color }}
         >
-          <h5 className="w-full text-right"> {date} </h5>
+          <p className="w-full text-right max-lg:text-center font-['Inter'] text-4xl max-sm:text-2xl">
+            {" "}
+            {date}{" "}
+          </p>
           <img
             src={imageName}
             className="w-fit my-auto"
@@ -148,30 +151,37 @@ function WorkDescription({
   description2 = "",
 }: workDescription) {
   return (
-    <section className="flex justify-center mb-96">
-      <div className="w-[67%]">
-        <div className="grid grid-cols-3 gap-1">
-          <div className="flex flex-col justify-starth-24 w-full gap-8">
+    <section className="flex justify-center mb-96 h-fit">
+      <div className="w-[67%] max-md:w-[80%]">
+        <div className="grid grid-cols-3 gap-1 max-lg:grid-cols-1 max-lg:gap-10">
+          <div className="flex flex-col justify-start w-full gap-8 max-lg:items-center">
             <section>
-              <p className="job-desc-format"> {job} </p>
+              <p className="job-desc-format max-lg:hidden"> {job} </p>
+              <p className="font-['Inter'] text-4xl max-sm:text-2xl lg:hidden">
+                {" "}
+                {job}{" "}
+              </p>
               {skills.map((item, index) => {
                 return (
-                  <p key={index} className="job-desc-format text-[#B4B4B4]">
+                  <p
+                    key={index}
+                    className="job-desc-format text-[#B4B4B4] max-lg:hidden"
+                  >
                     {item}
                   </p>
                 );
               })}
             </section>
 
-            <section>
+            <section className="max-lg:hidden">
               <p className="job-desc-format"> Team: </p>
               <p className="job-desc-format text-[#B4B4B4]"> {organization} </p>
               <p className="job-desc-format text-[#B4B4B4]"> {team} </p>
             </section>
           </div>
-          <div className="h-24 w-full col-span-2 flex flex-col gap-8">
-            <p className="text-left">{description}</p>
-            <p className="text-left">{description2}</p>
+          <div className="w-full lg:col-span-2 flex flex-col gap-8">
+            <p className="text-left max-lg:text-center">{description}</p>
+            <p className="text-left max-lg:text-center">{description2}</p>
           </div>
         </div>
       </div>
