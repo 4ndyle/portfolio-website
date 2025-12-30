@@ -6,7 +6,7 @@ function Experiences() {
       <h2 className="side-spacing text-7xl font-bold my-16 text-left max-md:text-6xl max-md:text-center max-[550px]:text-5xl">
         Experience.
       </h2>
-      <BlurFade delay={1} inView>
+      <BlurFade delay={0.75} inView>
         <Work
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
@@ -26,7 +26,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={1} inView>
+      <BlurFade delay={0.75} inView>
         <Work
           name="Shamrock Foods"
           organization="Special Forces Technologies"
@@ -46,7 +46,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={1} inView>
+      <BlurFade delay={0.75} inView>
         <Work
           name="ebay"
           organization="Pathways Program"
@@ -67,7 +67,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={1} inView>
+      <BlurFade delay={0.75} inView>
         <Work
           name="Iron Mountain"
           organization="Asset Lifecycle Management"
