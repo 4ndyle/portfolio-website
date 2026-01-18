@@ -6,7 +6,7 @@ function Experiences() {
       <h2 className="side-spacing text-7xl font-bold my-16 text-left max-md:text-6xl max-md:text-center max-[550px]:text-5xl">
         Experience.
       </h2>
-      <BlurFade delay={0.75} inView>
+      <BlurFade delay={0.25} inView>
         <Work
           name="Charles Schwab"
           organization="Portfolio Management Technologies"
@@ -16,7 +16,7 @@ function Experiences() {
           imgHeight="25vh"
         />
 
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.1} inView>
           <WorkDescription
             job="Software Engineer Intern"
             skills={["Full-Stack", "C# / .NET", "Data Structures / Algorithms"]}
@@ -26,7 +26,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={0.75} inView>
+      <BlurFade delay={0.25} inView>
         <Work
           name="Shamrock Foods"
           organization="Special Forces Technologies"
@@ -35,7 +35,7 @@ function Experiences() {
           color="#92AF8C"
         />
 
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.1} inView>
           <WorkDescription
             job="Software Engineer Intern"
             skills={["Full-Stack", "C# / .NET", "JavaScript", "SQL", "Azure"]}
@@ -46,7 +46,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={0.75} inView>
+      <BlurFade delay={0.25} inView>
         <Work
           name="ebay"
           organization="Pathways Program"
@@ -56,7 +56,7 @@ function Experiences() {
           imgHeight="15vh"
         />
 
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.1} inView>
           <WorkDescription
             job="ebay Pathways Program"
             skills={["Python", "Data Structures", "Algorithms"]}
@@ -67,7 +67,7 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
-      <BlurFade delay={0.75} inView>
+      <BlurFade delay={0.25} inView>
         <Work
           name="Iron Mountain"
           organization="Asset Lifecycle Management"
@@ -77,7 +77,7 @@ function Experiences() {
           imgHeight="12vh"
         />
 
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.1} inView>
           <WorkDescription
             job="Computer Technician"
             skills={["Quality Assurance", "Operating Systems", "Hardware"]}
