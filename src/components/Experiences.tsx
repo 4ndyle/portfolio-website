@@ -22,7 +22,7 @@ function Experiences() {
             skills={["Full-Stack", "C# / .NET", "Data Structures / Algorithms"]}
             organization="Cross Enterprise Technologies - "
             team="Portfolio Management Technologies"
-            description="To be determined :)"
+            description="Incoming Summer 2026"
           />
         </BlurFade>
       </BlurFade>
