@@ -26,6 +26,29 @@ function Experiences() {
           />
         </BlurFade>
       </BlurFade>
+
+      <BlurFade delay={0.25} inView>
+        <Work
+          name="Arizona State University"
+          organization="Enterprise Technology Operations"
+          imageName="ASU-Logo.png"
+          date="January 2026 - Present"
+          color="#FFD572"
+          imgHeight="25vh"
+        />
+
+        <BlurFade delay={0.1} inView>
+          <WorkDescription
+            job="Technology Consultant"
+            skills={["Troubleshooting", "Operating Systems", "A/V Technology"]}
+            organization="Enterprise Technology - "
+            team="Classroom Operations"
+            description="Provided technical support across Windows, macOS, and Linux systems, diagnosing and resolving issues to maintain high availability in computer labs and learning studios. Created documentation for OS configurations and software installations to improve efficiency and reduce recurring problems."
+            description2="This has given me a the opportunity to work closely with students, staff, and faculty to maintain systems and technologies to provide a great learning experience. Through this experience, I have learned how to effectively manage multiple priorities while improving my technical skills."
+          />
+        </BlurFade>
+      </BlurFade>
+
       <BlurFade delay={0.25} inView>
         <Work
           name="Shamrock Foods"
